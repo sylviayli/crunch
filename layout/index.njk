@@ -1,6 +1,12 @@
 {% extends 'includes/layout.njk' %}
 
 {% block body %}
-  {% include 'includes/recent-posts.njk' %}
+    <div class="posts">
+        {% include 'includes/recent-posts.njk' %}
+    </div>
+    <div class="infos">
+
+    </div>
+
   {{ paginator() }}
 {% endblock %}
