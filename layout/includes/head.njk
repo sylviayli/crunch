@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<title>{{ pageTitle }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Loading Bootstrap -->
+<link href="/flau_ui/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+<!-- Loading Flat UI -->
+<link href="/flau_ui/css/flat-ui.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="/flau_ui/favicon.ico">
+{% if (theme.stylesheets != undefined) and (theme.stylesheets.length > 0) %}
+    {# stylesheet list from config.yml #}
+    {% for url in theme.stylesheets %}
+        <link rel="stylesheet" href="{{ url }}">
+    {% endfor %}
+{% endif %}
