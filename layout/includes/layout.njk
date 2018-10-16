@@ -36,6 +36,7 @@
 <div class="container main-content">
     {# {% autoescape false %}{{ body }}{% endautoescape %} #}
     {% block body %}{% endblock %}
+    {% include 'includes/sidebar.njk' %}
 </div>
 
 <div id="bottom-outer" class="footer">
