@@ -10,6 +10,7 @@ menu:
 
 # Miscelaneous
 favicon: /favicon.ico
+headpic: /img/head-pic.jpg
 
 # stylesheets loaded in the <head>
 stylesheets:

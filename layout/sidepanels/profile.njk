@@ -1,5 +1,14 @@
 <div class="profile">
-    <div class="image"></div>
-    <div class="content"></div>
-    <div class="social"></div>
+    <div class="image">
+        <img src="{{ theme.headpic }}">
+    </div>
+    <div class="content">
+        <div class="name">{{ config.author }}</div>
+        <div class="desc">{{ config.desc|shorten }}</div>
+    </div>
+    <div class="social">
+        <button class="btn btn-default btn-social-pinterest">
+            <span class="fui-pinterest"></span>
+        </button>
+    </div>
 </div>

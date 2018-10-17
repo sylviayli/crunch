@@ -1,11 +1,92 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/lato-black.eot");
+  src: url("/fonts/lato/lato-black.eot?#iefix") format("embedded-opentype"), url("/fonts/lato/lato-black.woff") format("woff"), url("/fonts/lato/lato-black.ttf") format("truetype"), url("/fonts/lato/lato-black.svg#latoblack") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/lato-bold.eot");
+  src: url("/fonts/lato/lato-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/lato/lato-bold.woff") format("woff"), url("/fonts/lato/lato-bold.ttf") format("truetype"), url("/fonts/lato/lato-bold.svg#latobold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/lato-bolditalic.eot");
+  src: url("/fonts/lato/lato-bolditalic.eot?#iefix") format("embedded-opentype"), url("/fonts/lato/lato-bolditalic.woff") format("woff"), url("/fonts/lato/lato-bolditalic.ttf") format("truetype"), url("/fonts/lato/lato-bolditalic.svg#latobold-italic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/lato-italic.eot");
+  src: url("/fonts/lato/lato-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/lato/lato-italic.woff") format("woff"), url("/fonts/lato/lato-italic.ttf") format("truetype"), url("/fonts/lato/lato-italic.svg#latoitalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/lato-light.eot");
+  src: url("/fonts/lato/lato-light.eot?#iefix") format("embedded-opentype"), url("/fonts/lato/lato-light.woff") format("woff"), url("/fonts/lato/lato-light.ttf") format("truetype"), url("/fonts/lato/lato-light.svg#latolight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/lato-regular.eot");
+  src: url("/fonts/lato/lato-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/lato/lato-regular.woff") format("woff"), url("/fonts/lato/lato-regular.ttf") format("truetype"), url("/fonts/lato/lato-regular.svg#latoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url("/fonts/robotoslab/RobotoSlab-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url("/fonts/robotoslab/RobotoSlab-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url("/fonts/robotoslab/RobotoSlab-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url("/fonts/robotoslab/RobotoSlab-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HanYi-LingXin';
+  src: url("/fonts/hylx.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: #f1f1f1;
   min-height: 100vh;
   position: relative;
+  font-family: Lato;
 }
 div.navbar {
   background-image: url("/img/header-bg.png");
   background-size: 100% 100%;
+  height: 100px;
+}
+div.navbar .logo:hover,
+div.navbar .logo,
+div.navbar .logo:focus {
+  font-family: Roboto HanYi-LingXin;
+  color: #1abc9c;
+  background-color: transparent;
 }
 div.main-content {
   margin-top: 85px;
@@ -29,8 +110,6 @@ div.footer > div.foot-container {
 }
 div.sidebar {
   width: 372px;
-  background: #ff4500;
-  min-height: 360px;
   margin-left: 25px;
   flex: 1 1 372px;
 }
@@ -39,8 +118,45 @@ div.main {
   background: #00a1cb;
   flex: auto;
 }
+div.profile {
+  background: #e74c3c;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 div.profile > .image {
+  width: 106px;
+  height: 106px;
+  border: 0 none;
+  border-radius: 50px;
+  background-color: #d82425;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+div.profile > .image > img {
   width: 100px;
   height: 100px;
-  border: 2px solid;
+  border-radius: 50px;
+}
+div.profile > .content {
+  text-align: center;
+  margin-top: 25px;
+  padding: 0 25px;
+}
+div.profile > .content > .name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+div.profile > .content > .desc {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #f6f6f6;
+}
+div.profile > .social {
+  margin-top: 20px;
 }

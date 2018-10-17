@@ -1,23 +1,23 @@
 {% set pageTitle = page.title or config.subtitle or '' %}
 
 {% if is_archive() %}
-  {% set pageTitle = 'Archives' %}
+    {% set pageTitle = 'Archives' %}
 {% endif %}
 
 {% if is_tag() %}
-  {% set pageTitle = 'Tag: ' + page.tag %}
+    {% set pageTitle = 'Tag: ' + page.tag %}
 {% endif %}
 
 {% if is_category() %}
-  {% set pageTitle = 'Category: ' + page.category %}
+    {% set pageTitle = 'Category: ' + page.category %}
 {% endif %}
 
 {% if is_month() %}
-  {% set pageTitle = pageTitle + ': ' + page.month + '/' + page.year %}
+    {% set pageTitle = pageTitle + ': ' + page.month + '/' + page.year %}
 {% endif %}
 
 {% if is_year() %}
-  {% set pageTitle = pageTitle + ': ' + page.year %}
+    {% set pageTitle = pageTitle + ': ' + page.year %}
 {% endif %}
 
 {% set pageTitle = pageTitle + ' [ ' + config.title + ' ]' %}
@@ -25,12 +25,12 @@
 <!doctype html>
 <html lang="{{ config.language }}">
 <head>
-  {% include 'includes/head.njk' %}
+    {% include 'includes/head.njk' %}
 </head>
 <body>
 
 <div id="menu-outer">
-  {% include 'includes/nav.njk' %}
+    {% include 'includes/nav.njk' %}
 </div>
 
 <div class="container main-content">
@@ -40,14 +40,14 @@
 </div>
 
 <div id="bottom-outer" class="footer">
-  {% include 'includes/footer.njk' %}
+    {% include 'includes/footer.njk' %}
 </div>
 
 {% if (theme.scripts != undefined) and (theme.scripts.length > 0) %}
-  {# scripts list from config.yml #}
-  {% for url in theme.scripts %}
-    <script src="{{ url }}"></script>
-  {% endfor %}
+    {# scripts list from config.yml #}
+    {% for url in theme.scripts %}
+        <script src="{{ url }}"></script>
+    {% endfor %}
 {% endif %}
 
 </body>
