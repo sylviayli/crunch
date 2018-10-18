@@ -1,24 +1,24 @@
 <div class="navbar navbar-default navbar-lg navbar-expand-lg navbar-fixed-top" role="navigation">
     <nav class="container">
-        <a class="navbar-brand logo" href="/">哈哈哈</a>
+        <a class="navbar-brand logo" href="/">{{ config.title }}Crunch</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
-            <ul class="nav navbar-nav ml-auto">
+            <ul class="nav navbar-nav ml-auto menu">
                 {% for key,value in theme.menu %}
                     {#<li class="active"><a href="#fakelink">Home</a></li>#}
-                    <li><a href="{{ theme.menu[key] }}">{{ key }}</a></li>
+                    <li class="menu-item"><a href="{{ theme.menu[key] }}">{{ key }}</a></li>
                 {% endfor %}
             </ul>
-            <form class="navbar-form form-inline my-2 my-lg-0" action="#" role="search">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-                        <span class="input-group-btn">
-                                <button type="submit" class="btn"><span class="fui-search"></span></button>
-                            </span>
-                    </div>
-                </div>
-            </form>
+            {#<form class="navbar-form form-inline my-2 my-lg-0" action="#" role="search">#}
+                {#<div class="form-group">#}
+                    {#<div class="input-group">#}
+                        {#<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">#}
+                        {#<span class="input-group-btn">#}
+                                {#<button type="submit" class="btn"><span class="fui-search"></span></button>#}
+                            {#</span>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</form>#}
         </div>
     </nav>
 </div>
