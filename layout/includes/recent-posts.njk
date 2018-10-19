@@ -1,14 +1,16 @@
+{% import '_macro/post.njk' as post_template %}
 {% if page.posts.length > 0 %}
   <div id="recent-posts">
-    {% for postItem in page.posts.toArray() %}
-      <div class="recent-post-item">
-        <a href="{{ config.root }}{{ postItem.path }}">{{ postItem.title }}</a>
-        {% if postItem.date %}
-          <time datetime="{{ postItem.date.toJSON() }}">
-            {{ date(postItem.date) }}
-          </time>
-        {% endif %}
-      </div>
+    {% for postItem in page.posts %}
+      {#<div class="recent-post-item">#}
+        {#<a href="{{ config.root }}{{ postItem.path }}">{{ postItem.title }}</a>#}
+        {#{% if postItem.date %}#}
+          {#<time datetime="{{ postItem.date.toJSON() }}">#}
+            {#{{ date(postItem.date) }}#}
+          {#</time>#}
+        {#{% endif %}#}
+      {#</div>#}
+        {{ post_template.render(postItem, true) }}
     {% endfor %}
   </div>
 {% endif %}
