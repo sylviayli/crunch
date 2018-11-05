@@ -1,0 +1,57 @@
+.aside {
+  overflow: hidden;
+  width: 25%;
+  float: right;
+}
+.aside-section {
+  margin: 0 0 3em;
+}
+.aside-section h1 {
+  font: 1.25em/1.2 Lora;
+  margin: 0.67em 0;
+  color: #777;
+}
+.aside-section h1:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  margin-right: 0.45em;
+  float: left;
+  background: url("../../img/button.svg") no-repeat 0 0/84px 22px;
+  width: 22px;
+  height: 32px;
+}
+.aside-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.aside-section ul li {
+  border-top: 1px dashed #ddd;
+  margin-top: 0.6em;
+  padding-top: 0.6em;
+}
+.aside-section ul li a {
+  color: #f78769;
+  text-decoration: none;
+  font: 14px Lato;
+  transition: 0.3s;
+}
+.aside-section ul li a:hover {
+  color: #ddd;
+}
+.aside-section.tag li {
+  display: inline-block;
+  border: none;
+  margin: 0 10px 0 0;
+}
+.aside-section.tag li a {
+  border: 1px dashed #ddd;
+  padding: 4px;
+}
+@media screen and (max-width: 1015px) {
+  .aside {
+    width: 100%;
+  }
+}

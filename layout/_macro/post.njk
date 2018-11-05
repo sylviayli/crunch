@@ -1,8 +1,0 @@
-{% macro render(post, is_index) %}
-    {% if is_index %}
-        {{ post.excerpt }}
-    {% else %}
-        {{ post.content }}
-    {% endif %}
-
-{% endmacro %}

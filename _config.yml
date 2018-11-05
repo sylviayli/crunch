@@ -1,10 +1,11 @@
+
 # html lang
-language: zh-CN
+language: en
 
 # main menu navigation
 menu:
   Home: /
-  关于: /about
+  About: /about
   Contact: /contact
   Archives: /archives
 
@@ -19,3 +20,9 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/crunch.js
+
+# Widgets, enable at least one
+widgets:
+  category: enabled
+  archive: enabled
+  tag: enabled
