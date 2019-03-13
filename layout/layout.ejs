@@ -12,37 +12,32 @@ pageTitle += ' [ ' + config.title + ' ]';
 <!DOCTYPE html>
 <html lang="<%=config.language%>">
 <%- partial('_partials/head') %>
-<body>
-
-<div id="menu-outer">
-    <%- partial('_partials/nav') %>
-</div>
-
+<body style="background: <%- theme.background %>">
+<%- partial('_partials/nav') %>
 <div class="container main-content">
+
     <main class="main col-8 col-lg-8 col-sm-12">
         <%- body %>
     </main>
+    <aside class="col-4 col-lg-4 col-sm-2 aside">
 
-    <%- partial('_partials/sidebar') %>
+        <%- partial('_widget/profile') %>
+        <%- partial('_widget/category') %>
+        <section class="aside-section">
+            <%- partial('_widget/archive') %>
+        </section>
+        <section class="aside-section tag">
+            <%- partial('_widget/tag') %>
+        </section>
+    </aside>
 </div>
 
-<div id="bottom-outer" class="footer">
-    <%- partial('_partials/footer') %>
-</div>
-<!--<div id="bottom-outer">-->
-  <!--<div id="bottom-inner">-->
-    <!--Site by <%=config.author%> using-->
-    <!--<a href="http://hexo.io">hexo blog framework</a>.-->
-    <!--<br>-->
-    <!--<a href="<%=config.root%>">Home</a>-->
-  <!--</div>-->
-<!--</div>-->
 
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
-  <% theme.scripts.forEach(function(url) { %>
+    <!-- scripts list from theme config.yml -->
+    <% theme.scripts.forEach(function(url) { %>
     <script src="<%=url%>"></script>
-  <% }); %>
+    <% }); %>
 <% } %>
 
 </body>

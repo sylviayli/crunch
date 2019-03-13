@@ -1,29 +1,39 @@
-<div class="profile">
-    <div class="image">
-        <img src="{{ theme.headpic }}">
-    </div>
-    <div class="content">
-        <div class="name">{{ config.author }}</div>
-        <div class="desc">{{ config.desc }}</div>
-    </div>
-    <div class="social">
-        <button class="btn btn-outline-light">
-            <i class="fab fa-facebook-f"></i>
-        </button>
-        <button class="btn btn-outline-light">
-            <i class="fab fa-twitter"></i>
-        </button>
-        <button class="btn btn-outline-light">
-            <i class="fab fa-linkedin-in"></i>
-        </button>
-        <button class="btn btn-outline-light">
-            <i class="fab fa-google-plus-g"></i>
-        </button>
-        <button class="btn btn-outline-light">
-            <i class="fab fa-youtube"></i>
-        </button>
-        <button class="btn btn-outline-light">
-            <i class="fas fa-rss"></i>
-        </button>
-    </div>
-</div>
+<% if (theme.widgets.profile) { %>
+    <section class="aside-section profile">
+        <div class="image">
+            <img src="<%= config.headpic %>">
+        </div>
+        <div class="content">
+            <div class="name"><%= config.author %></div>
+            <div class="desc"><%= config.desc %></div>
+        </div>
+        <div class="social">
+            <!--<% if (theme.socials.weibo) {%>-->
+                <!--<button class="btn btn-outline-light">-->
+                    <!--<i class="fab fa-weibo"></i>-->
+                <!--</button>-->
+            <!--<% } %>-->
+            <!--<% if (theme.socials.wechat) {%>-->
+                <!--<button class="btn btn-outline-light">-->
+                    <!--<i class="fab fa-weixin"></i>-->
+                <!--</button>-->
+            <!--<% } %>-->
+            <!--<% if (theme.socials.linkedin) {%>-->
+                <!--<button class="btn btn-outline-light">-->
+                    <!--<i class="fab fa-linkedin-in"></i>-->
+                <!--</button>-->
+            <!--<% } %>-->
+            <!--<% if (theme.socials.github) {%>-->
+                <!--<button class="btn btn-outline-light">-->
+                    <!--<i class="fab fa-github"></i>-->
+                <!--</button>-->
+            <!--<% } %>-->
+
+            <!--<% if (theme.socials.rss) {%>-->
+                <!--<button class="btn btn-outline-light">-->
+                    <!--<i class="fas fa-rss"></i>-->
+                <!--</button>-->
+            <!--<% } %>-->
+        </div>
+    </section>
+<% } %>

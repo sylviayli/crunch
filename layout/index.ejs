@@ -1,14 +1,4 @@
-<%
-function getPostCover(post) {
-    var content = post.content
-    var regex = /<img src="(\S+)"/
-    var result = regex.exec(content)
 
-    if (result && result[1]) {
-        return result[1]
-    }
-}
-%>
 <section class="posts">
     <% page.posts.each(function (post) { %>
         <article class="post">
@@ -45,3 +35,4 @@ function getPostCover(post) {
         </article>
     <% }) %>
 </section>
+<%-paginator()%>

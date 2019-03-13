@@ -1,6 +1,6 @@
-
-# html lang
-language: en
+#
+## html lang
+#language: en
 
 # main menu navigation
 menu:
@@ -8,10 +8,10 @@ menu:
   About: /about
   Contact: /contact
   Archives: /archives
+#  分类: /categories
 
 # Miscelaneous
 favicon: /favicon.ico
-headpic: /img/head-pic.jpg
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -21,8 +21,16 @@ stylesheets:
 scripts:
 - /js/crunch.js
 
-# Widgets, enable at least one
 widgets:
+  profile: enabled
   category: enabled
   archive: enabled
   tag: enabled
+  search: enabled
+
+socials:
+  github: enabled
+  weibo: enabled
+  wechat: enabled
+  linkedin: enabled
+  rss: enabled
