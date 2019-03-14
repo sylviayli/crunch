@@ -16,19 +16,16 @@ pageTitle += ' [ ' + config.title + ' ]';
 <%- partial('_partials/nav') %>
 <div class="container main-content">
 
-    <main class="main col-8 col-lg-8 col-sm-12">
+    <main class="col-8 col-lg-8 col-sm-12">
         <%- body %>
     </main>
     <aside class="col-4 col-lg-4 col-sm-2 aside">
 
         <%- partial('_widget/profile') %>
         <%- partial('_widget/category') %>
-        <section class="aside-section">
-            <%- partial('_widget/archive') %>
-        </section>
-        <section class="aside-section tag">
-            <%- partial('_widget/tag') %>
-        </section>
+        <%- partial('_widget/archive') %>
+        <%- partial('_widget/tag') %>
+
     </aside>
 </div>
 
@@ -36,7 +33,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
     <!-- scripts list from theme config.yml -->
     <% theme.scripts.forEach(function(url) { %>
-    <script src="<%=url%>"></script>
+        <%- js(url) %>
     <% }); %>
 <% } %>
 

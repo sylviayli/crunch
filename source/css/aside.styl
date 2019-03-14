@@ -1,23 +1,28 @@
 //@import "font"
 .aside
-  overflow: hidden
+  overflow hidden
 
 .aside-section
-  margin: 0
-  margin-bottom 30px
-  padding 30px
+  margin 0
+  margin-bottom 2em
+  background white
+  padding 1.875em
+  box-shadow 0 0 6px 0 rgba(0, 0, 0, 0.06)
+  border 1px solid rgba(163, 169, 176, 0.3)
+  border-radius 2px
+  position relative
   h1
-    font: 1em RobotoSlab
+    font 1em RobotoSlab
     padding-left 38px
     position relative
-    color: #2F3C4E
+    color #2F3C4E
     margin-bottom .625em
     line-height 1.75em
     font-weight bold
     &:before
       position absolute
       left 0
-      display inline-block
+      display block
       font-family "Font Awesome 5 Free"
       content "\f07c"
       color #ffffff
@@ -25,7 +30,7 @@
       width 1.75em
       height 1.75em
       text-align center
-      font-size 1em
+      font-size .9em
       font-weight 700
       line-height 1.5em
       border-radius 2px
@@ -42,39 +47,66 @@
       z-index 2
 
   ul.category-list
-    list-style: none
-    margin: 0
-    padding: 0
+  ul.archive-list
+    list-style none
+    margin 0
+    padding .56em 0 0 0
+    border-top 2px solid #ECEDEE
     > li
-      border-top: 1px dashed #ddd
-      margin-top: .6em
-      padding-top: .6em
+      border-bottom 1px solid #ECEDEE
+      margin-top .6em
+      padding-bottom .6em
       position relative
       height 2.25em
-      &:first-child
-        border-top 2px solid #ECEDEE
+      &:last-child
+        border-bottom none
       a
-        color: #4B525C
-        text-decoration: none
-        font: .813em Lato
-        transition: .3s
+        color #4B525C
+        text-decoration none
+        font-size .813em
+        font-weight 900
+        transition .25s
+        width 100%
+        background rgba(0, 0, 0, 0)
+        display block
+        line-height 2em
         &:hover
-          color: #ddd
-      span
+          color #aaa
+        &:after
+          position absolute
+          font-family "Font Awesome 5 Free"
+          content '\f101'
+          font-size .825em
+          font-weight 700
+          right 0
+          line-height 2em
 
+  ul.tag-list
+    list-style none
+    margin 0
+    padding 1.25em 0 0 0
+    border-top 2px solid #ECEDEE
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    > li
+      display inline-block
+      margin 0 3px 3px 0
+      background rgba(246, 246, 246, 1)
+      border 1px solid rgba(166, 172, 179, 0.3)
+      flex-grow 1
+      text-align center
+      a
+        text-decoration none
+        font-size .75em
+        font-weight 700
+        color #A3A9B0
+        padding 0 .75em
 
-.aside-section.tag
-  li
-    display: inline-block
-    border: none
-    margin: 0 10px 0 0
-    a
-      border: 1px dashed #ddd
-      padding: 4px
 
 @media screen and (max-width: 1015px)
   .aside
-    width: 100%
+    width 100%
 
 
 // profile
@@ -121,6 +153,24 @@
 
 // categories
 .categories
-  background white
   h1:before
     content '\f07c'
+// tags
+.tags
+  h1:before
+    content '\f02c'
+
+.bottom-shadow
+  position absolute
+  bottom -4px
+  left -1px
+  height 5px
+  width calc(100% + 2px)
+  background rgba(255,255,255,1)
+  border 1px solid rgba(163, 169, 176, 0.3)
+  box-shadow 0 0 6px 0 rgba(0, 0, 0, 0.06)
+  border-radius 2px
+  z-index -1
+  &.second
+    bottom -7px
+    z-index -2

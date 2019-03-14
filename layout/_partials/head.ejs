@@ -16,7 +16,10 @@
 
     <!-- Loading highlight -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
-    <%- css('/css/crunch.css?1612') %>
+    <!--<%- css('/css/crunch.css') %>-->
+    <% theme.stylesheets.forEach(function(url) { %>
+        <%- css(url) %>
+    <% }); %>
     <script src="https://cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad()

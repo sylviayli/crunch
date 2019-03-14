@@ -1,6 +1,8 @@
 <% if (theme.widgets.category) { %>
     <section class="aside-section categories">
         <h1>Categories</h1>
-        <%- list_categories({show_count: true, depth: -1}) %>
+        <%- list_categories({show_count: false, depth: -1}) %>
+        <div class="bottom-shadow first"></div>
+        <div class="bottom-shadow second"></div>
     </section>
 <% } %>
