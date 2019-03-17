@@ -77,21 +77,57 @@ div.footer > div.foot-container
   padding 1.875em
   background white
   position relative
+  margin-bottom 1em
   h3 a
     text-decoration none
     color #2F3C4E
 
 .post-info
+  position relative
   display inline-block
   height 2.25em
-  padding 0 .5em
+  line-height 2.25em
+  padding 0 .5em 0 2.5em
+  margin-right 1.25em
   background rgba(246, 246, 246, 1)
   border 1px solid rgba(166, 172, 179, 0.3)
-  flex-grow 1
+  flex 0 0 auto
   text-align center
   font-size .75em
+  color #9BA1A8
   &:before
     font-family "Font Awesome 5 Free"
-    content "\f017"
+    content ""
     font-size .9375em
     font-weight 400
+    display block
+    position absolute
+    left 0
+    width 2.5em
+    text-align center
+  &.time:before
+    content "\f017"
+  &.category:before
+    content '\f07c'
+    font-weight 700
+  &.author:before
+    content '\f007'
+    font-weight 700
+  a
+    color #E74C3C
+    margin-right .25em
+    text-decoration none
+
+.post-cover
+  height 27em
+  img
+    width 100%
+    height 100%
+    object-fit cover
+
+.post-content
+  margin-bottom 1em
+  background white
+  position relative
+  padding 1.875em
+  font-size .8125em

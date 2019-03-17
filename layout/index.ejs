@@ -1,4 +1,14 @@
+<%
+function getPostCover(post) {
+    var content = post.content
+    var regex = /<img src="(\S+)"/
+    var result = regex.exec(content)
 
+    if (result && result[1]) {
+        return result[1]
+    }
+}
+%>
 <section class="posts">
     <% page.posts.each(function (post) { %>
         <article class="post">
@@ -8,35 +18,29 @@
                         <%- to_upper_case(post.title) %>
                     </a>
                 </h3>
-                <div class="infos">
-                    <div class="post-info"><%- date(post.date, 'LL') %></div>
+                <div class="infos d-flex flex-wrap">
+                    <div class="post-info author"><%= config.author %></div>
+                    <div class="post-info time"><%- date(post.date, 'LL') %></div>
+                    <div class="post-info category">分类：
+                        <% post.categories.each(function (cat) { %>
+                            <a href="<%- url_for(cat.path) %>">
+                                <%= cat.name %>
+                            </a>
+                        <%  }) %>
+                    </div>
                 </div>
                 <div class="bottom-shadow first"></div>
             </div>
-            <% post.categories.each(function (cat) { %>
-                <h4 class="post-cat">
-                    <a href="<%- url_for(cat.path) %>">
-                        <%= cat.name %>
-                    </a>
-                </h4>
-            <%  }) %>
-
-            <ul class="post-date">
-                <li>
-                    <%- date(post.date, 'LL') %>
-                </li>
-                <li>
-                    <%= config.author %>
-                </li>
-            </ul>
             <% if (theme.auto_cover && getPostCover(post)){%>
                 <div class="post-cover">
                     <img src="<%- getPostCover(post) %>">
                 </div>
             <%}%>
-            <div class="post-content ">
+            <div class="post-content box-base">
                 <%- post.excerpt %>
-                <a href="<%- url_for(post.path) %>" class="more-link">Continue reading</a>
+                <a href="<%- url_for(post.path) %>" class="more-link"><%= theme.excerpt_link %></a>
+                <div class="bottom-shadow first"></div>
+                <div class="bottom-shadow second"></div>
             </div>
         </article>
     <% }) %>

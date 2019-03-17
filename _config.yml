@@ -1,6 +1,6 @@
 #
 ## html lang
-#language: en
+language: zh-CN
 
 # main menu navigation
 menu:
@@ -34,3 +34,6 @@ socials:
   wechat: enabled
   linkedin: enabled
   rss: enabled
+
+# post settings
+auto_cover: true

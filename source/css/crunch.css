@@ -374,24 +374,65 @@ div.footer > div.foot-container {
   padding: 1.875em;
   background: #fff;
   position: relative;
+  margin-bottom: 1em;
 }
 .post-title h3 a {
   text-decoration: none;
   color: #2f3c4e;
 }
 .post-info {
+  position: relative;
   display: inline-block;
   height: 2.25em;
-  padding: 0 0.5em;
+  line-height: 2.25em;
+  padding: 0 0.5em 0 2.5em;
+  margin-right: 1.25em;
   background: #f6f6f6;
   border: 1px solid rgba(166,172,179,0.3);
-  flex-grow: 1;
+  flex: 0 0 auto;
   text-align: center;
   font-size: 0.75em;
+  color: #9ba1a8;
 }
 .post-info:before {
   font-family: "Font Awesome 5 Free";
-  content: "\f017";
+  content: "";
   font-size: 0.9375em;
   font-weight: 400;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 2.5em;
+  text-align: center;
+}
+.post-info.time:before {
+  content: "\f017";
+}
+.post-info.category:before {
+  content: '\f07c';
+  font-weight: 700;
+}
+.post-info.author:before {
+  content: '\f007';
+  font-weight: 700;
+}
+.post-info a {
+  color: #e74c3c;
+  margin-right: 0.25em;
+  text-decoration: none;
+}
+.post-cover {
+  height: 27em;
+}
+.post-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post-content {
+  margin-bottom: 1em;
+  background: #fff;
+  position: relative;
+  padding: 1.875em;
+  font-size: 0.8125em;
 }
