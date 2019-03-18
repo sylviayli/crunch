@@ -242,9 +242,12 @@ body {
   font-family: "Roboto Slab", HYRunYuan;
   font-size: 16px;
 }
-pre,
 code {
   font-family: "Source Code Pro";
+  background: #f6f6f6 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: normal;
+  border-left: 2px solid #e74c3c;
 }
 div.navbar {
   background-image: url("/img/header-bg.png");
@@ -336,6 +339,7 @@ div.footer > div.foot-container {
 .post-info:before {
   font-family: "Font Awesome 5 Free";
   content: "";
+  color: #a3a9b0;
   font-size: 0.9375rem;
   font-weight: 400;
   display: block;

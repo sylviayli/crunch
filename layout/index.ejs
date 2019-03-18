@@ -49,7 +49,11 @@ function getPostCover(post) {
                 </div>
             <%}%>
             <div class="post-content box-base">
-                <%- post.excerpt %>
+                <% if (post.excerpt){ %>
+                    <%- post.excerpt %>
+                <% } else { %>
+                    <%- post.content %>
+                <% } %>
                 <hr>
                 <div class="infos d-flex flex-wrap">
                     <% if (theme.post_info.view) {%>
