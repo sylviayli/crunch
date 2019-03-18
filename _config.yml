@@ -22,18 +22,27 @@ scripts:
 - /js/crunch.js
 
 widgets:
-  profile: enabled
-  category: enabled
-  archive: enabled
-  tag: enabled
-  search: enabled
+  profile: true
+  category: true
+  archive: true
+  tag: true
+  search: true
 
 socials:
-  github: enabled
-  weibo: enabled
-  wechat: enabled
-  linkedin: enabled
-  rss: enabled
+  github: true
+  weibo: true
+  wechat: true
+  linkedin: true
+  rss: false
 
 # post settings
 auto_cover: true
+excerpt_link: 查看全部
+post_info:
+  author: true
+  time: true
+  comment: false
+  category: true
+  like: false
+  view: true
+  share: true

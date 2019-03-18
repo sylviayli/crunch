@@ -5,7 +5,12 @@ body
   background #F1F1F1
   min-height 100vh
   position relative
-  font-family HYRunYuan
+  font-family "Roboto Slab", HYRunYuan
+  font-size 16px
+
+pre
+code
+  font-family "Source Code Pro"
 
 // 标题栏
 div.navbar
@@ -22,7 +27,7 @@ div.navbar .logo:hover, div.navbar .logo, div.navbar .logo:focus
 div.navbar ul.menu li.menu-item
   margin-right 20px
   font-size 15px
-  font-weight bold
+  //font-weight bold
 
 div.navbar ul.menu li.menu-item > a
   color #596371
@@ -45,9 +50,9 @@ div.main-content
 
 @media screen and (max-width: 640px)
   .main-content
-    margin: 3em 0 0
+    margin: 3rem 0 0
     width: 100%
-    padding: 1.75em
+    padding: 1.75rem
 
 
 div.footer
@@ -74,10 +79,10 @@ div.footer > div.foot-container
 
 //index post
 .post-title
-  padding 1.875em
+  padding 1.875rem
   background white
   position relative
-  margin-bottom 1em
+  margin-bottom 1rem
   h3 a
     text-decoration none
     color #2F3C4E
@@ -85,25 +90,25 @@ div.footer > div.foot-container
 .post-info
   position relative
   display inline-block
-  height 2.25em
-  line-height 2.25em
-  padding 0 .5em 0 2.5em
-  margin-right 1.25em
+  height 2.25rem
+  line-height 2.25rem
+  padding 0 .5rem 0 2rem
+  margin-right 1.25rem
   background rgba(246, 246, 246, 1)
   border 1px solid rgba(166, 172, 179, 0.3)
   flex 0 0 auto
   text-align center
-  font-size .75em
+  font-size .75rem
   color #9BA1A8
   &:before
     font-family "Font Awesome 5 Free"
     content ""
-    font-size .9375em
+    font-size .9375rem
     font-weight 400
     display block
     position absolute
     left 0
-    width 2.5em
+    width 2rem
     text-align center
   &.time:before
     content "\f017"
@@ -113,21 +118,41 @@ div.footer > div.foot-container
   &.author:before
     content '\f007'
     font-weight 700
+  &.view:before
+    content '\f06e'
+  &.like:before
+    content '\f004'
+    font-weight 700
+  &.share:before
+    content '\f1e0'
+    font-weight 700
+  &.comment:before
+    content '\f086'
+    font-weight 700
+  &.more
+    border none
+    background #E74C3C
+    color white !important
+    margin-left auto
+    padding 0 .75rem
+    text-decoration none
+    cursor pointer
+  span
   a
     color #E74C3C
-    margin-right .25em
+    margin-right .25rem
     text-decoration none
 
 .post-cover
-  height 27em
+  height 27rem
   img
     width 100%
     height 100%
     object-fit cover
 
 .post-content
-  margin-bottom 1em
+  margin-bottom 3.5rem
   background white
   position relative
-  padding 1.875em
-  font-size .8125em
+  padding 1.875rem
+  font-size .8125rem
