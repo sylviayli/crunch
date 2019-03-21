@@ -404,3 +404,6 @@ div.footer > div.foot-container {
   padding: 1.875rem;
   font-size: 0.8125rem;
 }
+.post-content img {
+  width: 100%;
+}

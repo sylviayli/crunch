@@ -1,7 +1,51 @@
 
-<article id="post">
-  <h1><%=page.title%></h1>
-  <%-page.content%>
+<article class="post" id="post">
+  <div class="post-title w-100 box-base">
+    <h3>
+      <a href="<%- url_for(page.path) %>">
+        <%- to_upper_case(page.title) %>
+      </a>
+    </h3>
+    <div class="infos d-flex flex-wrap">
+      <% if (theme.post_info.author) {%>
+        <div class="post-info author">作者: <span><%= config.author %></span></div>
+      <% } %>
+      <% if (theme.post_info.time) {%>
+        <div class="post-info time"><%- date(page.date, 'LL') %></div>
+      <% } %>
+      <% if (theme.post_info.comment) {%>
+        <div class="post-info comment"><span>22</span>评论</div>
+      <% } %>
+      <% if (theme.post_info.category) {%>
+        <div class="post-info category">分类：
+          <% page.categories.each(function (cat) { %>
+            <a href="<%- url_for(cat.path) %>">
+              <%= cat.name %>
+            </a>
+          <%  }) %>
+        </div>
+      <% } %>
+      <% if (theme.post_info.like) {%>
+        <div class="post-info like"><span>16</span></div>
+      <% } %>
+    </div>
+    <div class="bottom-shadow first"></div>
+  </div>
+  <div class="post-content box-base">
+    <%- page.content %>
+    <hr>
+    <div class="infos d-flex flex-wrap">
+      <% if (theme.post_info.view) {%>
+        <div class="post-info view"><span>35</span>次阅读</div>
+      <% } %>
+      <% if (theme.post_info.share) {%>
+        <div class="post-info share"><span>分享本文</span></div>
+      <% } %>
+      <a class="post-info more" href="<%- url_for(page.path) %>"><%= theme.excerpt_link %></a>
+    </div>
+    <div class="bottom-shadow first"></div>
+    <div class="bottom-shadow second"></div>
+  </div>
 </article>
 
 <%-paginator()%>
